@@ -10,9 +10,23 @@ function updateTotalField() {
     const total = document.getElementById('total-expenses');
     total.innerText = totalExpenses;
 
+
+    const incomeInputText = document.getElementById('income-input').value;
+    const incomeInput = parseFloat(incomeInputText);
+
+    const totalBalance = incomeInput - totalExpenses;
+    const balance = document.getElementById('total-balance');
+    balance.innerText = totalBalance;
 }
 
 
 document.getElementById('calculate-btn').addEventListener('click', function () {
     updateTotalField();
+
+
+
 });
+
+
+
+
