@@ -24,6 +24,17 @@ function updateTotalField() {
     const balanceRemain = document.getElementById('balance-remain');
     savingAmount.innerText = totalSave;
     balanceRemain.innerText = remainSave;
+
+    if (foodInput != 'number' ||
+        rentInput != 'number' ||
+        clothInput != 'number' ||
+        foodInput > 0 ||
+        rentInput > 0 ||
+        clothInput > 0
+    ) {
+        console.log('please enter number')
+    } return;
+
 }
 
 document.getElementById('calculate-btn').addEventListener('click', function () {
